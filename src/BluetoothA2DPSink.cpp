@@ -698,7 +698,6 @@ extern "C" void audio_data_callback_2(const uint8_t *data, uint32_t len) {
 }
 
 extern "C" void app_a2d_callback_2(esp_a2d_cb_event_t event, esp_a2d_cb_param_t *param){
-  i2s_stop(i2s_port);  // included by toli
   ESP_LOGD(BT_AV_TAG, "%s", __func__);
   if (actualBluetoothA2DPSink)
     actualBluetoothA2DPSink->app_a2d_callback(event, param);
